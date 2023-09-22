@@ -1,11 +1,11 @@
-Heroku buildpack: odbc
-=======================
+# Heroku buildpack: odbc
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks).
 
-This buildpack will place precompiled `libmsodbcsql-17.5.so.2.1` and `msodbcsqlr17.rll` files in locations so Heroku can read the `ODBC Driver 17 for SQL Server` driver for python `pyodbc`. This driver is version 17.5.
+This buildpack will place precompiled `libmsodbcsql-18.3.so.1.1` and ~`msodbcsqlr18.rll`~ files in locations so Heroku can read the `ODBC Driver 18 for SQL Server` driver for python `pyodbc`. This driver is version 18.5.
 
 # Requirements
+
 - The first buildpack should be heroku-buildpack-apt:
   `https://github.com/heroku/heroku-buildpack-apt.git`
 - The second buildpack should be heroku/python:
@@ -13,4 +13,4 @@ This buildpack will place precompiled `libmsodbcsql-17.5.so.2.1` and `msodbcsqlr
 - The Aptfile should contain the following items:
   `unixodbc unixodbc-dev`
 - This buildpack should be after the apt buildpack and python buildpacks:
-  `https://github.com/matt-bertoncello/python-pyodbc-buildpack.git`
+  `https://github.com/Esh07/python-pyodbc-buildpack`
